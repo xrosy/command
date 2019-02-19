@@ -9,13 +9,19 @@ function pad (str, width) {
 }
 
 
-Command.prototype.version = function (str, flags) {
+Command.prototype.version = function (str, flags, description) {
     if (arguments.length === 0) return this._version;
+
     this._version = str;
+
     flags = flags || '-v, --version';
-    var versionOption = new Option(flags, '输出版本号');
+
+    var versionOption = new Option(flags, description || '输出版本号');
+
     this._versionOptionName = versionOption.long.substr(2) || 'version';
+
     this.options.push(versionOption);
+
     this.on('option:' + this._versionOptionName, function() {
       process.stdout.write(str + '\n');
       process.exit(0);
