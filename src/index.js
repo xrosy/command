@@ -55,5 +55,10 @@ Command.prototype.outputHelp = function(caller) {
   this.emit('--help');
 };
 
+Command.prototype.missingArgument = function(name) {
+  console.error("错误: 缺少必需的参数 `%s'", name);
+  process.exit(1);
+};
+
 
 module.exports = new Command();
