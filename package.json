@@ -1,7 +1,7 @@
 {
-  "name": "xrosy-command",
-  "version": "0.1.2",
-  "description": "",
+  "name": "@xrosy/command",
+  "version": "0.1.0",
+  "description": "Commander是node.js的轻量级，富有表现力和强大的命令行框架。",
   "main": "./src/index.js",
   "license": "MIT",
   "private": false,
@@ -21,6 +21,6 @@
   ],
   "devDependencies": {},
   "dependencies": {
-    "commander": "^2.19.0"
+    "commander": "^2.20.0"
   }
 }
